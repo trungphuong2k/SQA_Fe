@@ -1,0 +1,145 @@
+@import "../../assets/scss/color";
+$color-white: #fff;
+.form-search {
+  width: 500px;
+}
+td,
+th {
+  border: 1px solid $border-color;
+  text-align: left;
+}
+tbody tr:hover {
+  background: #f5f5f5;
+}
+thead {
+  border-bottom: 3px solid $border-color;
+  cursor: pointer;
+  th {
+    padding: 5px 10px;
+  }
+}
+tfoot th {
+  padding: 5px 10px;
+}
+table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+}
+td {
+  word-break: break-all;
+  button {
+    word-break: normal;
+  }
+}
+.main-content {
+  margin: 0 20px 20px 20px;
+  border-top: 2px solid #d2d6de;
+  font-family: "Source Sans Pro", sans-serif;
+  background: $color-white;
+  padding: 15px;
+  .container {
+    background: $color-white;
+    td,
+    th {
+      padding: 5px 10px;
+      position: relative;
+    }
+    .th-sort {
+      position: absolute;
+      right: 5%;
+    }
+  }
+  .title {
+    font-size: 17px;
+    padding-bottom: 10px;
+    color: #333333;
+  }
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  .desc {
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+}
+.group-btn {
+  display: flex;
+  justify-content: center;
+  .ant-btn {
+    color: $color-white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .btn-edit {
+    background: $success;
+    margin-right: 10px;
+  }
+  .btn-delete {
+    background: $danger;
+  }
+}
+.btn-submit {
+  margin: 0 auto;
+}
+.ant-form-item.form-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-content {
+  padding: 40px 20px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  .name {
+    font-size: 24px;
+  }
+}
+.btn-add {
+  background-color: $mainheader-background;
+}
+@media screen and (max-width: 576px) {
+  table {
+    font-size: 11px;
+  }
+  .container {
+    overflow: auto;
+    white-space: nowrap;
+  }
+  .main-header {
+    .menu {
+      .menu-info {
+        padding: 0;
+      }
+    }
+  }
+  .person-name {
+    display: none;
+  }
+  .icon-edit,
+  .icon-delete {
+    font-size: 11px;
+  }
+  .btn-edit,
+  .btn-delete {
+    padding: 6px;
+  }
+  .table-footer {
+    flex-direction: column;
+  }
+  .ant-form .ant-form-item .ant-form-item-control {
+    flex: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main-content {
+    overflow: scroll;
+  }
+}

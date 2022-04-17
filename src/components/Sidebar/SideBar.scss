@@ -1,0 +1,142 @@
+@import "../../assets/scss/color";
+$color-white: #fff;
+$color-search: #7b746d;
+
+.sidebar {
+  background: $topnav-background;
+  width: 230px;
+  color: $color-white;
+  height: 100vh;
+}
+.top-nav {
+  background: $topnav-background;
+  padding: 10px;
+}
+.user {
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  .user-avatar {
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      display: block;
+    }
+  }
+  .user-info {
+    margin-left: 20px;
+    .user-name {
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 5px;
+      margin-bottom: 0;
+    }
+    .user-status {
+      display: flex;
+      margin-bottom: 0;
+      align-items: center;
+      &-round {
+        background: $userstatus-color;
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        display: block;
+        margin-right: 5px;
+      }
+      &-text {
+        font-size: 11px;
+      }
+    }
+  }
+}
+.search {
+  background: $search-color;
+  display: flex;
+  height: 35px;
+  border-radius: 2px;
+  border: 1px solid $search-color;
+  .search-input {
+    background: transparent;
+    border: none;
+    padding-left: 10px;
+    font-size: 14px;
+    color: $color-search;
+  }
+  .search-icon {
+    display: flex;
+    align-items: center;
+    color: $color-search;
+  }
+}
+.sidebar {
+  .title {
+    background: $mainnav-background;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $title-color;
+    padding: 15px;
+  }
+  .list {
+    cursor: pointer;
+  }
+}
+.main-nav {
+  .item {
+    background: $topnav-background;
+    display: flex;
+    padding: 12px 20px;
+    justify-content: space-between;
+    color: $item-color;
+    &:hover {
+      background: $mainnav-background;
+      .item-left {
+        color: $color-white;
+      }
+    }
+  }
+  .item.active {
+    border-left: 3px solid $primary;
+    background: $mainnav-background;
+  }
+}
+.item-left {
+  display: flex;
+  align-items: center;
+  color: $item-color;
+  .item-left-icon {
+    position: relative;
+    font-size: 20px;
+    color: $item-color;
+  }
+  .content {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+}
+.item-right-icon {
+  .box {
+    padding: 3px 5px;
+    border-radius: 2px;
+    color: $color-white;
+    font-size: 10px;
+    margin-left: 5px;
+    &-primary {
+      background: $primary;
+    }
+    &-success {
+      background: $success;
+    }
+    &-danger {
+      background: $danger;
+    }
+    &-warning {
+      background: $warning;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

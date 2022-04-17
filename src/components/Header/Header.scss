@@ -1,0 +1,104 @@
+@import '../../assets/scss/color';
+$color-white: #fff;
+
+.header{
+    display: flex;
+    color: $color-white;
+    line-height: 50px;
+}
+.nav-brand{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 230px;
+    background-color: $navbrand-background;
+    text-align: center;
+    font-size: 20px;
+    height: 50px;
+    cursor: pointer;
+    b{
+        font-size: 21px;
+    }
+}
+.main-header{
+    height: 50px;
+    background-color: $mainheader-background;
+    display: flex;
+    width: calc(100% - 230px);
+    justify-content: space-between;
+    .icon{
+        padding: 0 15px;
+        cursor: pointer;
+        &:hover{
+            background: $navbrand-background;
+        }
+    }
+    .menu{
+        display: flex;
+        cursor: pointer;
+        .menu-notifications{
+            display: flex;
+            list-style-type: none;
+        }
+        .menu-info{
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            &:hover{
+                background: $navbrand-background;
+            }
+            .person-avatar{
+                margin-right: 10px;
+                img{
+                    width: 30px;
+                    border-radius: 100%;
+                    display: block;
+                }
+            }
+            .person-name{
+                font-size: 14px;
+            }
+        }
+    }
+}
+.main-header{
+    .item{
+        padding: 0 10px;
+        position: relative;
+        &:hover{
+            background: $navbrand-background;
+        }
+        &-noti{
+            top: -12px;
+            right: 2px;
+            position: relative;
+            border-radius: 2px;
+            padding: 2px 3px;
+            font-size: 9px;
+            &-success{
+                background: $success;
+            }
+            &-danger{
+                background: $danger;
+            }
+            &-warning{
+                background: $warning;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        display: block;
+        order: 1;
+        .nav-brand{
+            width: 100%;
+            transition-property: width;
+            transition-duration: 1s;
+        }
+        .main-header{
+            width: 100%;
+            transition-property: width;
+            transition-duration: 1s;
+        }
+    }
+}
